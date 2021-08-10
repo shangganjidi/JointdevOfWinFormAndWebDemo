@@ -22,5 +22,10 @@ namespace WebKitDemo
         {
             webKitBrowser1.Navigate("https://www.baidu.com/");
         }
+
+        private void webKitBrowser2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

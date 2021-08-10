@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33B136C1-8ACE-4039-BEFA-E28C61662871}</ProjectGuid>
+    <ProjectGuid>{1030027E-9C97-4D41-B5E0-DA4BA688672E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WebKitDemo</RootNamespace>
-    <AssemblyName>WebKitDemo</AssemblyName>
+    <RootNamespace>GeckoDemo</RootNamespace>
+    <AssemblyName>GeckoDemo</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="OpenWebKitSharp">
-      <HintPath>..\Binary\OpenWebKitSharp.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,14 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WebKitPage.cs">
+    <Compile Include="GeckoPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WebKitPage.Designer.cs">
-      <DependentUpon>WebKitPage.cs</DependentUpon>
+    <Compile Include="GeckoPage.Designer.cs">
+      <DependentUpon>GeckoPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GeckoPage.resx">
+      <DependentUpon>GeckoPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,11 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WebKitPage.resx">
-      <DependentUpon>WebKitPage.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

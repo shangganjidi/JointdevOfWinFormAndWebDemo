@@ -1,7 +1,7 @@
 ﻿
-namespace WebKitDemo
+namespace GeckoDemo
 {
-    partial class WebKitPage
+    partial class GeckoPage
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -29,40 +29,21 @@ namespace WebKitDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.webKitBrowser1 = new WebKit.WebKitBrowser();
             this.SuspendLayout();
             // 
-            // webKitBrowser1
-            // 
-            this.webKitBrowser1.AllowDrop = true;
-            this.webKitBrowser1.BackColor = System.Drawing.Color.White;
-            this.webKitBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webKitBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webKitBrowser1.Name = "webKitBrowser1";
-            this.webKitBrowser1.Password = null;
-            this.webKitBrowser1.PrivateBrowsing = false;
-            this.webKitBrowser1.Size = new System.Drawing.Size(800, 450);
-            this.webKitBrowser1.TabIndex = 2;
-            this.webKitBrowser1.Url = null;
-            this.webKitBrowser1.Username = null;
-            // 
-            // WebKitPage
+            // GeckoPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.webKitBrowser1);
-            this.Name = "WebKitPage";
-            this.Text = "WebKit内核";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.WebKitPage_Load);
+            this.Name = "GeckoPage";
+            this.Text = "Gecko内核";
+            this.Load += new System.EventHandler(this.GeckoPage_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private WebKit.WebKitBrowser webKitBrowser1;
     }
 }
 

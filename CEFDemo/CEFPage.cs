@@ -28,7 +28,7 @@ namespace CEFDemo
             // 避免页面加载不出来, 建议加上这句
             Cef.Initialize(new CefSettings());
 
-            chromeBrowser = new ChromiumWebBrowser("http://shilibang.qcyp.top/UserAccount/Index")
+            chromeBrowser = new ChromiumWebBrowser("https://www.baidu.com/")
             {
                 Dock = DockStyle.Fill
             };
