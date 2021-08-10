@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,6 +68,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Firefox64\omni.ja" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,5 +83,34 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Firefox64\AccessibleMarshal.dll" />
+    <Content Include="Firefox64\d3dcompiler_47.dll" />
+    <Content Include="Firefox64\freebl3.dll" />
+    <Content Include="Firefox64\icudt58.dll" />
+    <Content Include="Firefox64\icuin58.dll" />
+    <Content Include="Firefox64\icuuc58.dll" />
+    <Content Include="Firefox64\lgpllibs.dll" />
+    <Content Include="Firefox64\libEGL.dll" />
+    <Content Include="Firefox64\libGLESv2.dll" />
+    <Content Include="Firefox64\mozglue.dll" />
+    <Content Include="Firefox64\nss3.dll" />
+    <Content Include="Firefox64\nssckbi.dll" />
+    <Content Include="Firefox64\nssdbm3.dll" />
+    <Content Include="Firefox64\plugin-container.exe" />
+    <Content Include="Firefox64\plugin-hang-ui.exe" />
+    <Content Include="Firefox64\sandboxbroker.dll" />
+    <Content Include="Firefox64\softokn3.dll" />
+    <Content Include="Firefox64\xul.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.WebDriver.GeckoDriver.0.29.1\build\Selenium.WebDriver.GeckoDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.GeckoDriver.0.29.1\build\Selenium.WebDriver.GeckoDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.GeckoDriver.0.29.1\build\Selenium.WebDriver.GeckoDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.GeckoDriver.0.29.1\build\Selenium.WebDriver.GeckoDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Geckofx45.64.Windows.0.13.0\build\Geckofx45.64.Windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Geckofx45.64.Windows.0.13.0\build\Geckofx45.64.Windows.targets'))" />
+  </Target>
+  <Import Project="..\packages\Geckofx45.64.Windows.0.13.0\build\Geckofx45.64.Windows.targets" Condition="Exists('..\packages\Geckofx45.64.Windows.0.13.0\build\Geckofx45.64.Windows.targets')" />
 </Project>
